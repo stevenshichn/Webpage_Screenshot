@@ -52,7 +52,8 @@ def startToScrape(url):
 	folderName = url
 	if '//' in url:
 		folderName = url.split('//')[1].replace('/','')
-	browser = webdriver.PhantomJS("C:/Program Files/Python36/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+	###browser = webdriver.PhantomJS("C:/Program Files/Python36/phantomjs-2.1.1-windows/bin/phantomjs.exe")
+	browser = webdriver.Chrome('./chromedriver')
 	browser.get(url)
 	print(browser.title)
 	browser.maximize_window()
